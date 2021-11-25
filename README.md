@@ -28,8 +28,8 @@
 - void printTree(Node* nodeTree, int depth): in ra cây sau khi build.
 - char labelPredictRecursion(Node* nodeTree, Data* cur): Hàm recursion để lấy nhãn dự đoán 1 bản ghi trên cây decisionTree đã build.
 - double prediction(Tree* decisionTree, vector<Data>* cur): Accuracy khi dự đoán tập cur.
-## Update 1: chạy Hyperparameter cho Minsize, Maxdepth with CrossValidation:
 ***
+## Update 1: chạy Hyperparameter cho Minsize, Maxdepth with CrossValidation:
 - void buildBestModel(vector<Data>* cur): tìm ra minSize và maxDepth tốt nhất có sử dụng CrossValidation với kFold = 7 (để tránh overfitting).
 - double calcPrecisionKFord(): phục vụ cho chia crossValidation, có thể trả về 1 trong 3 loại giá trị để so sánh:
 +   predictionTest * predictionTrain / (predictionTest + predictionTrain) : tác giả tự sáng tạo dựa trên kiểu tính F1 score.
