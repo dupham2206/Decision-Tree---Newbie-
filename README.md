@@ -4,14 +4,14 @@
 ### Giáo viên hướng dẫn: CN Nguyễn Đình Tuân.
 ***
 ## 1. Giới thiệu bộ dữ liệu và output:
-###Input:
+### Input:
 - Bộ dữ liệu về Balance-Scale gồm 4 thuộc tính và 3 nhãn L (Left), R(Right), B(Balance) với 625 bản ghi.
 - Bộ dự liệu đầy đủ có tại file fullTest.txt.
 - File trainTest.txt có 439 bản ghi dùng để build decision tree.
 - File validTest.txt có 93 bản ghi dùng để test decision.tree.
 - File hiddenTest.txt là 93 bản ghi còn để thầy Tuân test lại.
 - File Decision Tree.pptx giới thiệu về những đặc điểm cơ bản Decision Tree, GiniIndex, Information Gain, Confusion Matrix, Hyperparameter Search, Cross Validation, Sklearn check, Present answer by plot.
-###Output:
+### Output:
 - Giả sử hệ thống của ta chỉ có file trainTest.txt và che đi validTest.txt, hiddenTest.txt . Ta sẽ dự đoán cho validTest. hiddenTest sẽ là thầy kiểm tra lại.
 - Print tree: in ra cây quyết định.
 - Max Depth: Giá trị maxDepth chọn thông qua Hyperparameter search.
