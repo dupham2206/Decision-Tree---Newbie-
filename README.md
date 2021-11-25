@@ -48,9 +48,9 @@
 ## Update 1: chạy Hyperparameter cho Minsize, Maxdepth with CrossValidation:
 - void buildBestModel(vector<Data>* cur): tìm ra minSize và maxDepth tốt nhất có sử dụng CrossValidation với kFold = 7 (để tránh overfitting).
 - double calcPrecisionKFord(): phục vụ cho chia crossValidation, có thể trả về 1 trong 3 loại giá trị để so sánh:
-+++ predictionTest * predictionTrain / (predictionTest + predictionTrain) : tác giả tự sáng tạo dựa trên kiểu tính F1 score.
-+++ predictionTest * predictionTrain: tác giả tự sáng tạo dựa trên việc cần cả tập train và tập test đều cao tránh việc Overfitting nên dùng phép nhân. (a * b <= a^2 + b^2. max khi a = b)
-+++ predictionTest: chỉ quan tâm để testSet.
+* predictionTest * predictionTrain / (predictionTest + predictionTrain) : tác giả tự sáng tạo dựa trên kiểu tính F1 score.
+* predictionTest * predictionTrain: tác giả tự sáng tạo dựa trên việc cần cả tập train và tập test đều cao tránh việc Overfitting nên dùng phép nhân. (a * b <= a^2 + b^2. max khi a = b)
+* predictionTest: chỉ quan tâm để testSet.
 - **Cải thiện: Thay vì chọn ngẫu nhiên Minsize, Maxdepth thì đã cố định được tốt nhất và tránh được overfitting khi chọn. Accuracy in validTest: 78% và Accuracy in trainTest: 95%.**
 ***
 ## Update 2: Cải thiện tốc độ thuật toán
