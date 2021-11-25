@@ -3,12 +3,12 @@
 ### Thành viên: Phạm Tiến Du MSV 20020039.
 ### Giáo viên hướng dẫn: CN Nguyễn Đình Tuân.
 ## 1. Giới thiệu bộ dữ liệu:
-#### Bộ dữ liệu về Balance-Scale gồm 4 thuộc tính và 3 nhãn L (Left), R(Right), B(Balance) với 625 bản ghi.
-#### Bộ dự liệu đầy đủ có tại file fullTest.txt.
-#### File trainTest.txt có 439 bản ghi dùng để build decision tree.
-#### File validTest.txt có 93 bản ghi dùng để test decision.tree.
-#### File hiddenTest.txt là 93 bản ghi còn để thầy Tuân test lại.
-#### File Decision Tree.pptx giới thiệu về những đặc điểm cơ bản Decision Tree, GiniIndex, Information Gain, Confusion Matrix, Hyperparameter Search, Cross Validation, Sklearn check, Present answer by plot.
+- Bộ dữ liệu về Balance-Scale gồm 4 thuộc tính và 3 nhãn L (Left), R(Right), B(Balance) với 625 bản ghi.
+- Bộ dự liệu đầy đủ có tại file fullTest.txt.
+- File trainTest.txt có 439 bản ghi dùng để build decision tree.
+- File validTest.txt có 93 bản ghi dùng để test decision.tree.
+- File hiddenTest.txt là 93 bản ghi còn để thầy Tuân test lại.
+- File Decision Tree.pptx giới thiệu về những đặc điểm cơ bản Decision Tree, GiniIndex, Information Gain, Confusion Matrix, Hyperparameter Search, Cross Validation, Sklearn check, Present answer by plot.
 ## 2. Giới thiệu cấu trúc:
 #### source code ở file decisionTree.cpp.
 #### struct Data: lưu lại 1 bản ghi của dữ liệu gồm 4 thuộc tính và nhãn.
