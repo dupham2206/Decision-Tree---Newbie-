@@ -219,7 +219,7 @@ void buildTree(Tree* decisionTree, vector<Data>* cur, int maxDepth, int minSize)
 void printTree(Node* nodeTree, int depth){
     if(nodeTree == nullptr) return;
     string print;
-    for(int i = 1; i < depth; ++i) print += " ";
+    for(int i = 1; i < depth; ++i) print += "   ";
     if(nodeTree->label == NOT_TERMINATE_NODE)
         cout << print << "[X" << nodeTree->attributeCondition << " < " << nodeTree->valueCondition << "]\n";
     else
@@ -280,7 +280,7 @@ double calcPrecisionKFord(int numberOfFold , vector<Data>* cur, int minSize, int
     buildTree(decisionTree, trainSet, maxDepth, minSize);
     double predictionTest = prediction(decisionTree, testSet);
     double predictionTrain = prediction(decisionTree, trainSet);
-    return 2 * predictionTest * predictionTrain / (predictionTest + predictionTrain); // something cal like F1
+    return 2 * predictionTest * predictionTrain / (predictionTest + predictionTrain); // something like F1
     //return prediction(decisionTree, testSet) * prediction(decisionTree, trainSet);
     //return prediction(decisionTree, testSet);
 
@@ -293,10 +293,8 @@ void buildBestModel(vector<Data>* cur){
         for(int j = 1; j <= SizeOfMaxdepth; ++j){
             double sumProductPrecisionTrainAndSet = 0.0;
             for(int k = 1; k <= kFold; ++k){
-                //if(i == 1) cout << calcPrecisionKFord(k, cur, i, j, numberElementEachFold) << "\n";
                 sumProductPrecisionTrainAndSet += calcPrecisionKFord(k, cur, i, j, numberElementEachFold);
             }
-            cout << i << " " << j << " " << sumProductPrecisionTrainAndSet/kFold << "\n";
             if(sumProductPrecisionTrainAndSet > tempSum){
                 tempSum = sumProductPrecisionTrainAndSet;
                 bestMaxDepth = j;
@@ -333,21 +331,5 @@ signed main(){
     cout << "Accuracy of unseenSet: " << prediction(decisionTree, unseenSet) * 100 << "%\n";
     addConfusionMatrix(decisionTree, unseenSet);
 
-
-
-    /*
-    for(int i = 2; i <= SizeOfMinSize; ++i){
-        ofstream file;
-        file.open("answerForPlot.txt");
-
-        for(int j = 1; j <= SizeOfMaxdepth; ++j){
-            Tree* decisionTree = new Tree();
-            buildTree(decisionTree, dataSet, j, i);
-            //cout << "minsize:" << i << " " << "maxdepth:" << j << " ";
-            //cout << prediction(decisionTree, dataSet) <<  " " << prediction(decisionTree, unseenSet) << "\n";
-            file << j << "," << prediction(decisionTree, dataSet) << "," << prediction(decisionTree, unseenSet) << "\n";
-        }
-    }
-    */
 }
 

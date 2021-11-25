@@ -1,0 +1,180 @@
+[X1 < 3]
+   [X2 < 3]
+      [X3 < 3]
+         [X0 < 3]
+            [X1 < 2]
+               [X0 < 2]
+                  [X2 < 2]
+                     B
+                     R
+                  B
+               [X0 < 2]
+                  [X2 < 2]
+                     L
+                     B
+                  [X3 < 2]
+                     L
+                     B
+            [X1 < 2]
+               [X2 < 2]
+                  L
+                  L
+               L
+         [X0 < 2]
+            R
+            [X1 < 2]
+               [X2 < 2]
+                  [X0 < 3]
+                     R
+                     [X0 < 4]
+                        [X3 < 4]
+                           B
+                           R
+                        [X3 < 4]
+                           L
+                           [X0 < 5]
+                              B
+                              L
+                  R
+               [X2 < 2]
+                  [X0 < 3]
+                     L
+                     L
+                  [X0 < 3]
+                     R
+                     [X0 < 5]
+                        [X3 < 5]
+                           B
+                           R
+                        L
+      [X3 < 3]
+         [X1 < 2]
+            [X0 < 4]
+               R
+               [X3 < 2]
+                  [X2 < 4]
+                     L
+                     R
+                  R
+            [X0 < 2]
+               R
+               [X3 < 2]
+                  [X0 < 3]
+                     [X2 < 5]
+                        L
+                        R
+                     L
+                  [X0 < 3]
+                     R
+                     [X0 < 4]
+                        B
+                        [X2 < 4]
+                           L
+                           B
+         R
+   [X0 < 3]
+      [X2 < 4]
+         [X3 < 2]
+            [X1 < 4]
+               [X2 < 3]
+                  L
+                  B
+               L
+            [X2 < 3]
+               [X0 < 2]
+                  [X2 < 2]
+                     [X3 < 5]
+                        [X1 < 5]
+                           [X3 < 4]
+                              L
+                              B
+                           L
+                        [X1 < 5]
+                           R
+                           B
+                     [X3 < 3]
+                        B
+                        R
+                  [X2 < 2]
+                     L
+                     [X3 < 3]
+                        L
+                        [X1 < 4]
+                           [X3 < 4]
+                              B
+                              R
+                           [X3 < 5]
+                              L
+                              B
+               [X3 < 3]
+                  [X0 < 2]
+                     R
+                     [X1 < 4]
+                        B
+                        L
+                  [X1 < 5]
+                     R
+                     [X3 < 4]
+                        L
+                        R
+         [X3 < 3]
+            [X3 < 2]
+               [X0 < 2]
+                  L
+                  L
+               [X0 < 2]
+                  R
+                  [X1 < 4]
+                     R
+                     B
+            R
+      [X2 < 3]
+         [X3 < 5]
+            L
+            [X0 < 4]
+               [X1 < 4]
+                  L
+                  L
+               L
+         [X3 < 3]
+            L
+            [X2 < 4]
+               [X1 < 4]
+                  [X3 < 4]
+                     L
+                     [X3 < 5]
+                        L
+                        B
+                  [X0 < 4]
+                     [X1 < 5]
+                        R
+                        L
+                     L
+               [X0 < 4]
+                  [X3 < 4]
+                     [X1 < 5]
+                        R
+                        L
+                     R
+                  [X1 < 4]
+                     [X3 < 4]
+                        B
+                        R
+                     [X3 < 4]
+                        L
+                        [X0 < 5]
+                           [X1 < 5]
+                              R
+                              L
+                           [X1 < 5]
+                              B
+                              L
+MaxDepth: 10
+MinSize: 2
+Accuracy of dataSet: 94.7608%
+Accuracy of unseenSet: 82.7957%
+Confusion matrix: horizontal axis is predict, vertical axis is true
+93 L B R
+L  39 3 1
+B  3 2 2
+R  4 3 36
