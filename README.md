@@ -21,7 +21,13 @@
 - confusionMatrix: Bảng 3x3 với cột là dự doán. Cột là true label, hàng là predict label.
 - **output được lưu trong output.txt người đọc có thể xem tiện.**
 ***
-## 2. Giới thiệu cấu trúc:
+## 2. Giới thiệu thuật toán, module implement:
+- Decision Tree: xây dựng cây quyết định theo cách đệ quy.
+- Hyperparameter search: chạy các trường hợp minSize và maxDepth từ đó đánh giá giá trị minSize và maxDepth tốt nhất.
+- Cross validation: Để chạy Hyperparameter cần chia trainSet ra làm phần để build và phần test. Cross validation sẽ chia đều cho các phần rồi tính giá trị trung bình. Từ đó sẽ khách quan hơn, giảm overfitting.
+- Confusion Matrix: Bảng đối chiếu nxn với n là số thuộc tính để biết được số lượng nhãn true label là i và hệ thống đoán là j với 1 <= i <= n, 1<= j <= n.
+***
+## 3. Giới thiệu cấu trúc:
 - source code ở file decisionTree.cpp.
 - struct Data: lưu lại 1 bản ghi của dữ liệu gồm 4 thuộc tính và nhãn.
 - struct Node: gồm Nhãn node (Label), thuộc tính điều kiện (attributeCondition), giá trị thuộc tính điều kiện(valueCondition),Node left, Node right. Nếu Node chưa phải terminateNode thì sẽ được gán nhãn khác L, R, B.
@@ -42,9 +48,9 @@
 ## Update 1: chạy Hyperparameter cho Minsize, Maxdepth with CrossValidation:
 - void buildBestModel(vector<Data>* cur): tìm ra minSize và maxDepth tốt nhất có sử dụng CrossValidation với kFold = 7 (để tránh overfitting).
 - double calcPrecisionKFord(): phục vụ cho chia crossValidation, có thể trả về 1 trong 3 loại giá trị để so sánh:
-+   predictionTest * predictionTrain / (predictionTest + predictionTrain) : tác giả tự sáng tạo dựa trên kiểu tính F1 score.
-+   predictionTest * predictionTrain: tác giả tự sáng tạo dựa trên việc cần cả tập train và tập test đều cao tránh việc Overfitting nên dùng phép nhân. (a * b <= a^2 + b^2. max khi a = b)
-+   predictionTest: chỉ quan tâm để testSet.
++++ predictionTest * predictionTrain / (predictionTest + predictionTrain) : tác giả tự sáng tạo dựa trên kiểu tính F1 score.
++++ predictionTest * predictionTrain: tác giả tự sáng tạo dựa trên việc cần cả tập train và tập test đều cao tránh việc Overfitting nên dùng phép nhân. (a * b <= a^2 + b^2. max khi a = b)
++++ predictionTest: chỉ quan tâm để testSet.
 - **Cải thiện: Thay vì chọn ngẫu nhiên Minsize, Maxdepth thì đã cố định được tốt nhất và tránh được overfitting khi chọn. Accuracy in validTest: 78% và Accuracy in trainTest: 95%.**
 ***
 ## Update 2: Cải thiện tốc độ thuật toán
