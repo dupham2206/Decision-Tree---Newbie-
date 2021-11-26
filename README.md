@@ -67,7 +67,7 @@
 ***
 ## Update 5: Confusion Matrix
 - void addConfusionMatrix(Tree* decisionTree, vector<Data>* cur): in ra ConfusionMatrix sau khi dự đoán hết các tập dữ liệu.
-- **Cải thiện: Thấu hiểu rõ hơn về việc cần cải thiện việc đoán nhãn B, dẫn đến update 6.**
+- **Cải thiện: Thấu hiểu rõ hơn về việc cần cải thiện việc đoán nhãn B, dẫn đến update 5.**
 ## Update 6: Dùng True/False Positive/Negative, Precision and Recall, F1 scores
 - Không thể update thêm do chưa xác định được nhãn nào là quan trọng hơn nhãn nào.
 ***
